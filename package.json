@@ -2,10 +2,10 @@
     "name": "ctlog-snippets",
     "displayName": "村淘埋点片段",
     "description": "村淘埋点规范",
-    "version": "0.0.1",
+    "version": "1.0.2",
     "publisher": "echoechoa",
     "engines": {
-        "vscode": "^1.41.0"
+        "vscode": "^1.27.0"
     },
     "repository": {
         "type": "git",
