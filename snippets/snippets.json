@@ -1,0 +1,87 @@
+{
+    "doc": {
+        "prefix": "ctdoc",
+        "body": "// 埋点文档：https://yuque.antfin-inc.com/cun-marketing/egk020/gi6xis$0",
+        "description": "引用组件"
+    },
+    "import": {
+        "prefix": "ctimp",
+        "body": "// 埋点文档：https://yuque.antfin-inc.com/cun-marketing/egk020/gi6xis\nimport TouchLink from '@ali/rax-touchlink';$0",
+        "description": "引用组件"
+    },
+    "drawExp": {
+        "prefix": "ctde",
+        "body": "TouchLink.record('/cun.koi.draw', 'EXP', {goKey: `activityId=${${1:activityId}}&activityPoolId=${${2:activityPoolId || ''}}&drawActivityId=${${3:drawActivityId || ''}}`, spmc: ${4:spmc}, spmd: ${5:spmd}});$0",
+        "description": "抽奖曝光打点"
+    },
+    "draw": {
+        "prefix": "ctdclk",
+        "body": "// 使用dolpin-sdk会自动打点，不需要额外打点\nTouchLink.record('/cun.koi.draw', 'CLK', {goKey: `activityId=${${1:activityId}}&activityPoolId=${${2:activityPoolId}}&drawActivityId=${${3:drawActivityId}}`, spmc: ${4:spmc}, spmd: ${5:spmd}});$0",
+        "description": "抽奖点击"
+    },
+    "follow": {
+        "prefix": "ctf",
+        "body": "TouchLink.record('/cun.koi.follow', 'CLK', {goKey: `sellerId=${${1:sellerId}}&channel=${${2:channel}}&isMiniApp=${${4:isMiniApp}}`, spmc: ${5:spmc}, spmd: ${6:spmd}});$0",
+        "description": "关注点击"
+    },
+    "followExp": {
+        "prefix": "ctfe",
+        "body": "TouchLink.record('/cun.koi.follow', 'EXP', {goKey: `sellerId=${${1:sellerId}}&channel=${${2:channel}}&isMiniApp=${${4:isMiniApp}}`, spmc: ${5:spmc}, spmd: ${6:spmd}});$0",
+        "description": "关注曝光"
+    },
+    "followQing": {
+        "prefix": "ctfq",
+        "body": "TouchLink.record('/cun.koi.followqing', 'CLK', {goKey: `sellerId=${${1:sellerId}}&channel=${${2:channel}}`, spmc: ${3:spmc}, spmd: ${4:spmd}});$0",
+        "description": "关注轻店点击"
+    },
+    "followQingExp": {
+        "prefix": "ctfqe",
+        "body": "TouchLink.record('/cun.koi.followqing', 'EXP', {goKey: `sellerId=${${1:sellerId}}&channel=${${2:channel}}`, spmc: ${3:spmc}, spmd: ${4:spmd}});$0",
+        "description": "关注轻店曝光"
+    },
+    "share": {
+        "prefix": "cts",
+        "body": "TouchLink.record('/cun.koi.share', 'CLK', {goKey: `taskType=shareCard&shareCode=${${1:shareCode}}`, spmc: ${2:spmc}, spmd: ${3:spmd}});$0",
+        "description": "分享点击"
+    },
+    "shareExp": {
+        "prefix": "ctse",
+        "body": "TouchLink.record('/cun.koi.share', 'EXP', {goKey: `taskType=shareCard&shareCode=${${1:shareCode}}`, spmc: ${2:spmc}, spmd: ${3:spmd}});$0",
+        "description": "分享曝光"
+    },
+    "task": {
+        "prefix": "ctt",
+        "body": "// 不推荐打点，使用任务列表组件即可\nTouchLink.record('/cun.koi.task', 'CLK', {goKey: `shareCode=${${1:shareCode}}&taskType=${${2:taskType}}`, spmc: ${3:spmc}, spmd: ${4:spmd}});$0",
+        "description": "任务点击"
+    },
+    "taskExp": {
+        "prefix": "ctte",
+        "body": "// 不推荐打点，使用任务列表组件即可\nTouchLink.record('/cun.koi.task', 'EXP', {goKey: `shareCode=${${1:shareCode}}&taskType=${${2:taskType}}`, spmc: ${3:spmc}, spmd: ${4:spmd}});$0",
+        "description": "任务曝光"
+    },
+    "drawResult": {
+        "prefix": "ctdr",
+        "body": "// 使用dolphin-sdk会自动打点，不需要额外打点\nTouchLink.record('/cun.koi.drawresult', 'CLK', {goKey: `activityId=${${1:activityId}}&drawActivityId=${${2:drawActivityKey} || ''}&rank=${${3:rank}}&awardtype=${${4:awardType}}&awardkey=${${5:awardKey}}, spmc: ${6:spmc}, spmd: ${7:spmd}});$0",
+        "description": "抽奖结果打点"
+    },
+    "login": {
+        "prefix": "ctl",
+        "body": "TouchLink.record('/cun.koi.login', 'CLK', {goKey: '', spmc: ${1:spmc}, spmd: ${2:spmd}});$0",
+        "description": "唤起登录打点"
+    },
+    "isLogin": {
+        "prefix": "ctisl",
+        "body": "TouchLink.record('/cun.koi.isLogin', 'EXP', {goKey: '', spmc: ${1:spmc}, spmd: ${2:spmd}});$0",
+        "description": "用户是否登录判断"
+    },
+    "lbs": {
+        "prefix": "ctlbs",
+        "body": "TouchLink.record('/cun.koi.hasLBS', 'EXP', {goKey: `areaCode=${${1:areaCode}}&lon=${${2:lon}}&lat=${${3:lat}}`, spmc: ${4:spmc}, spmd: ${5:spmd}});$0",
+        "description": "用户具有LBS"
+    },
+    "noLbs": {
+        "prefix": "ctnlbs",
+        "body": "TouchLink.record('/cun.koi.noLBS', 'EXP', {goKey: '', spmc: ${1:spmc}, spmd: ${2:spmd}});$0",
+        "description": "用户未开启LBS"
+    }
+}

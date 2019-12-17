@@ -1,0 +1,26 @@
+{
+    "name": "ctlog-snippets",
+    "displayName": "村淘埋点片段",
+    "description": "村淘埋点规范",
+    "version": "0.0.1",
+    "publisher": "Wenjing Yang",
+    "engines": {
+        "vscode": "^1.41.0"
+    },
+    "icon": "images/record.png",
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascript",
+                "path": "./snippets/snippets.json"
+            },
+            {
+                "language": "javascriptreact",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    }
+}
