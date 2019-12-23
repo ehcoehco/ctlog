@@ -9,6 +9,16 @@
         "body": "// 埋点文档：https://yuque.antfin-inc.com/cun-marketing/egk020/gi6xis\nimport TouchLink from '@ali/rax-touchlink';$0",
         "description": "引用组件"
     },
+    "launch": {
+        "prefix": "ctla",
+        "body": "TouchLink.launch([${1:spma}, ${2:spmb}]);$0",
+        "description": "类似于goldlog.launch, 内置用户路径分析的初始化流程"
+    },
+    "muelog": {
+        "prefix": "ctmue",
+        "body": "TouchLink.mueRecord(${1:actionName});$0",
+        "description": "用户路径分析主动打点"
+    },
     "drawExp": {
         "prefix": "ctde",
         "body": "TouchLink.record('/cun.koi.draw', 'EXP', {goKey: `activityId=${${1:activityId}}&activityPoolId=${${2:activityPoolId || ''}}&drawActivityId=${${3:drawActivityId || ''}}`, spmc: ${4:spmc}, spmd: ${5:spmd}});$0",
